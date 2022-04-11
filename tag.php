@@ -2,7 +2,7 @@
 <main>
 	<div class="container">
 		<?php include('bread.php'); ?>
-		<h1><?php single_cat_title(); ?></h1>
+		<h1><?php single_tag_title(); ?></h1>
 		<div class="content_wrap">
 			<div class="main">
 				<div class="archive-list">
