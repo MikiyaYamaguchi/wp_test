@@ -7,6 +7,7 @@
 				</a>
 			</div>
 			<div class="ftr_info">
+				<?php get_search_form(); ?>
 				<p class="tel">TEL <span class="pc-only">000-0000-0000</span><span class="sp-only"><a href="tel:00000000000">000-0000-0000</a></span></p>
 				<p class="address">住所 テキストテキストテキストテキストテキスト</p>
 				<div class="ftr_sns">

@@ -11,8 +11,7 @@
 						while (have_posts()) : the_post();
 					?>
 							<article>
-								<p><a href="<?php echo the_permalink(); ?>"><?php echo $post->post_title; ?></a></p>
-								<time><?php echo get_post_time('Y.n.j(D)'); ?></time>
+								<p><a href="<?php echo the_permalink(); ?>"><time><?php echo get_post_time('Y/n/j'); ?></time>　<br class="sp-only"><?php echo $post->post_title; ?></a></p>
 							</article>
 						<?php
 						endwhile;

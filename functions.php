@@ -1,4 +1,10 @@
 <?php
+
+//shortcodeディレクトリ内のファイルを全て呼び出し
+foreach (glob(TEMPLATEPATH . "/shortcode/*.php") as $file) {
+	require_once $file;
+}
+
 //WP管理画面にメニュー設定画面を追加
 add_action('after_setup_theme', 'register_menu');
 function register_menu()
@@ -6,7 +12,7 @@ function register_menu()
 	register_nav_menu('primary', __('Primary Menu', 'theme-slug'));
 }
 
-add_theme_support('custom-header', $custom_header_defaults);
+add_theme_support('custom-header');
 
 //テーマの中で使われる位置設定
 if (!function_exists('lab_setup')) {
@@ -15,7 +21,6 @@ if (!function_exists('lab_setup')) {
 
 		register_nav_menus(array(
 			'global' => 'グローバルナビ',
-			'footer' => 'フッターメニュー'
 		));
 	}
 }

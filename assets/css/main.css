@@ -70,6 +70,26 @@ main > .container > .content_wrap {
   padding-left: 0;
 }
 
+form.search input[type="text"] {
+  border: 1px solid #000;
+  padding: 0.3em;
+  width: 100%;
+  max-width: 250px;
+}
+
+form.search input[type="text"]:focus {
+  outline: 0;
+}
+
+form.search input[type="submit"] {
+  border: none;
+  border-radius: 0;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.2em 1em;
+}
+
 @media screen and (max-width: 767px) {
   main > .container > .content_wrap {
     display: block;
@@ -82,6 +102,44 @@ main > .container > .content_wrap {
     width: 100%;
     margin-left: 0;
     box-sizing: border-box;
+  }
+}
+
+.post_list_wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.post_list {
+  padding-left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.post_list li {
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.post_list li:last-child {
+  border-bottom: none;
+}
+
+.post_list li a {
+  padding: 3%;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+.post_list li a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 767px) {
+  .post_list li a {
+    padding: 5%;
   }
 }
 
@@ -273,10 +331,6 @@ TOP
   object-fit: cover;
 }
 
-.sec_about {
-  margin-bottom: 0;
-}
-
 .sec_contact {
   background: url(/wp_test/wp-content/uploads/contact_bg.jpg) no-repeat
     center/cover;
@@ -431,5 +485,39 @@ footer .copy_right {
   }
   footer .ftr_menu ul li {
     text-align: left;
+  }
+}
+
+/*------------------------------
+archive
+------------------------------*/
+
+.archive-list article {
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.archive-list article:last-child {
+  border-bottom: none;
+}
+
+.archive-list article:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.archive-list article p {
+  margin: 0;
+}
+
+.archive-list article p a {
+  display: block;
+  padding: 3%;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .archive-list article p a {
+    padding: 5%;
   }
 }
